@@ -1,0 +1,5 @@
+ rdd1=sc.textFile("/FileStore/tables/file.txt")
+ rdd2=rdd1.flatMap(lambda x:x.split(" "))
+ rdd3=rdd2.map(lambda x: (x,1))
+ rdd4=rdd3.reduceByKey(lambda x,y:x + y)
+ rdd4.collect()
