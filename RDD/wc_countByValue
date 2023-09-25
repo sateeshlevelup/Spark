@@ -2,4 +2,8 @@
  rdd2=rdd1.flatMap(lambda x:x.split(" "))
  rdd3=rdd2.map(lambda x: (x.lower()))
  rdd4=rdd3.countByValue()
- print(rdd4)
+ result=rdd4.collect()
+
+for a in result:
+ print(result)
+
