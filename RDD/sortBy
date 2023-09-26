@@ -1,0 +1,43 @@
+ rdd1=sc.textFile("/FileStore/tables/file.txt")
+ rdd2=rdd1.flatMap(lambda x:x.split(" "))
+ rdd3=rdd2.map(lambda x: (x.lower,1))
+ rdd4=rdd3.reduceByKey(lambda x,y:x + y)
+ rdd5=rdd4.sortBy(lambda x: x[1],False).collect()
+ for a in rdd5:
+  print(a)
+
+
+  In PySpark, both `sortByKey` and `sortBy` are used to sort the elements within an RDD (Resilient Distributed Dataset), but they differ in their primary purpose and how they operate:
+
+1. **`sortByKey`**:
+
+   - **Primary Purpose**: `sortByKey` is specifically designed for sorting RDDs that contain key-value pairs. It sorts the RDD based on the keys while maintaining the association between keys and values.
+
+   - **Usage**: You should use `sortByKey` when your RDD contains key-value pairs, and you want to sort the elements primarily based on the keys.
+
+   - **Example**:
+     ```python
+     # Sort an RDD of key-value pairs by keys
+     sorted_rdd = rdd.sortByKey()
+     ```
+
+2. **`sortBy`**:
+
+   - **Primary Purpose**: `sortBy` is a more general-purpose sorting operation in PySpark. It can be used to sort an RDD of any type of elements, not just key-value pairs. It sorts the RDD based on the values themselves, not by their keys.
+
+   - **Usage**: You should use `sortBy` when you want to sort an RDD based on the values themselves, regardless of whether they are key-value pairs or other types of elements.
+
+   - **Example**:
+     ```python
+     # Sort an RDD of integers in descending order
+     sorted_rdd = rdd.sortBy(lambda x: x, ascending=False)
+     ```
+
+Here's a summary of the key differences:
+
+- `sortByKey` is specifically for sorting RDDs containing key-value pairs, while `sortBy` can be used to sort any type of RDD.
+- `sortByKey` sorts based on the keys, while `sortBy` sorts based on the values.
+- `sortBy` provides more flexibility as it allows you to define a custom sorting function through a lambda function or a key function.
+- You can specify the sorting order (ascending or descending) for both `sortByKey` and `sortBy` using optional parameters.
+
+In summary, the choice between `sortByKey` and `sortBy` depends on the structure of your RDD and whether you need to sort by keys or values.
