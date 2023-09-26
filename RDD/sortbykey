@@ -1,0 +1,42 @@
+In PySpark, the `sortByKey` operation is used to sort the elements of an RDD (Resilient Distributed Dataset) based on their keys. RDDs are a fundamental data structure in PySpark, and this operation is particularly useful when you have key-value pairs in your RDD, and you want to order them by their keys. Here's how `sortByKey` works in PySpark:
+
+1. **Create an RDD**: You first need to create an RDD containing key-value pairs. Each element in the RDD should be a tuple or a pair, where the first element is the key, and the second element is the value.
+
+2. **Apply `sortByKey`**: Once you have your key-value RDD, you can use the `sortByKey` operation to sort the elements based on their keys. The `sortByKey` operation takes care of the sorting process and returns a new RDD with the elements sorted by their keys.
+
+Here's an example of how to use `sortByKey` in PySpark:
+
+```python
+from pyspark import SparkContext
+
+# Create a SparkContext (only need to do this once in your script)
+sc = SparkContext("local", "SortByKeyExample")
+
+# Create an RDD with key-value pairs
+data = [(3, "apple"), (1, "banana"), (2, "cherry"), (4, "date")]
+rdd = sc.parallelize(data)
+
+# Use sortByKey to sort the RDD by keys in ascending order
+sorted_rdd = rdd.sortByKey()
+
+# Collect and print the sorted results
+sorted_data = sorted_rdd.collect()
+for key, value in sorted_data:
+    print(f"Key: {key}, Value: {value}")
+
+# Stop the SparkContext when done
+sc.stop()
+```
+
+Example 2:
+
+ rdd1=sc.textFile("/FileStore/tables/file.txt")
+ rdd2=rdd1.flatMap(lambda x:x.split(" "))
+ rdd3=rdd2.map(lambda x: (x.lower(),1))
+ rdd4=rdd3.reduceByKey(lambda x,y:x + y).map(lambda x:(x[1],[0]))
+ rdd4.sortBykey(False).map(lambda x:(x[1],x[0])).collect()
+
+
+In this example, we create an RDD with key-value pairs and then use `sortByKey` to sort the RDD based on the keys in ascending order. The result is collected and printed, showing the elements sorted by their keys.
+
+You can also specify the sorting order (ascending or descending) by passing an optional parameter to `sortByKey`. For example, `sortByKey(ascending=False)` will sort the RDD in descending order based on the keys.
