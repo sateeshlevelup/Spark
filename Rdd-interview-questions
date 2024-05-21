@@ -1,0 +1,106 @@
+
+### General Questions
+
+1. **What is PySpark RDD?**
+2. **Explain the key features of RDD in PySpark.**
+3. **What are the advantages of using RDDs in PySpark?**
+4. **Describe the RDD lineage.**
+5. **How does PySpark handle fault tolerance in RDDs?**
+6. **What are the different types of operations that can be performed on RDDs?**
+7. **What is the difference between a transformation and an action in PySpark RDDs?**
+8. **Explain lazy evaluation in the context of RDDs.**
+9. **How can you create an RDD in PySpark?**
+10. **What are the different methods to create an RDD in PySpark?**
+11. **Explain the `map()` transformation with an example.**
+12. **What is the difference between `map()` and `flatMap()` transformations?**
+13. **Describe the `filter()` transformation and its use case.**
+14. **What is the `reduce()` action and how does it work?**
+15. **Explain the `collect()` action.**
+16. **What is the purpose of the `take()` action?**
+17. **How does the `saveAsTextFile()` action work?**
+18. **Describe the `count()` action.**
+19. **What is the `union()` transformation in PySpark?**
+20. **Explain the `intersection()` transformation.**
+21. **Describe the `distinct()` transformation.**
+22. **How does the `groupByKey()` transformation work?**
+23. **What is the difference between `groupByKey()` and `reduceByKey()`?**
+24. **Explain the `join()` transformation with an example.**
+25. **What is the `cartesian()` transformation and when would you use it?**
+26. **Describe the `coalesce()` transformation.**
+27. **What is the purpose of the `repartition()` transformation?**
+28. **Explain how to persist an RDD in memory.**
+29. **What are the different storage levels available in PySpark for persisting RDDs?**
+30. **How can you unpersist an RDD?**
+31. **What is the `zip()` transformation in PySpark?**
+32. **Explain the `sample()` transformation.**
+33. **Describe the `aggregate()` action and its use case.**
+34. **What is a broadcast variable and how is it used in PySpark?**
+35. **Explain the concept of accumulators in PySpark.**
+36. **What is the purpose of the `foreach()` action?**
+37. **How can you debug a PySpark application?**
+38. **Explain the difference between `cache()` and `persist()`.**
+39. **What is the `glom()` transformation?**
+40. **Describe the `pipe()` transformation and its use case.**
+41. **How does the `foreachPartition()` action work?**
+42. **What is the significance of partitioning in RDDs?**
+43. **Explain the `keyBy()` transformation.**
+44. **What are shuffle operations and why are they expensive?**
+45. **How can you optimize PySpark RDD performance?**
+46. **What is the `lookup()` transformation?**
+47. **Describe the `reduceByKeyLocally()` transformation.**
+48. **What is the `subtract()` transformation and when is it used?**
+49. **Explain the `aggregateByKey()` transformation.**
+50. **What are the best practices for writing PySpark RDD code?**
+
+### Scenario-Based Coding Questions
+
+1. **Write a PySpark program to count the number of lines in a text file.**
+2. **Given an RDD of numbers, write a PySpark program to compute the sum of all numbers.**
+3. **Create an RDD from a list of tuples and write a PySpark program to group the elements by key.**
+4. **Write a PySpark program to find the maximum value in an RDD of integers.**
+5. **Given an RDD of words, write a PySpark program to count the occurrences of each word.**
+6. **Write a PySpark program to filter out even numbers from an RDD of integers.**
+7. **Create an RDD from a list of strings and write a PySpark program to convert all strings to uppercase.**
+8. **Write a PySpark program to join two RDDs based on a common key.**
+9. **Given an RDD of (key, value) pairs, write a PySpark program to find the average value for each key.**
+10. **Write a PySpark program to find the distinct elements in an RDD.**
+11. **Create an RDD from a text file and write a PySpark program to find the top 10 most frequent words.**
+12. **Write a PySpark program to perform a Cartesian product of two RDDs.**
+13. **Given an RDD of (key, value) pairs, write a PySpark program to sort the RDD by key.**
+14. **Write a PySpark program to repartition an RDD into a specified number of partitions.**
+15. **Given an RDD of (key, value) pairs, write a PySpark program to perform a reduceByKey operation.**
+16. **Write a PySpark program to compute the average of an RDD of numbers.**
+17. **Given an RDD of (key, value) pairs, write a PySpark program to combine values with the same key using a provided function.**
+18. **Write a PySpark program to persist an RDD in memory and disk.**
+19. **Given an RDD of (key, value) pairs, write a PySpark program to count the number of unique keys.**
+20. **Write a PySpark program to sample 10% of an RDD.**
+21. **Given an RDD of sentences, write a PySpark program to count the number of words in each sentence.**
+22. **Write a PySpark program to compute the average length of words in an RDD.**
+23. **Given an RDD of (key, value) pairs, write a PySpark program to filter out keys with values less than a specified threshold.**
+24. **Write a PySpark program to merge two RDDs into one.**
+25. **Given an RDD of integers, write a PySpark program to find the second largest number.**
+26. **Write a PySpark program to count the number of partitions in an RDD.**
+27. **Given an RDD of (key, value) pairs, write a PySpark program to compute the sum of values for each key.**
+28. **Write a PySpark program to perform a union of two RDDs.**
+29. **Given an RDD of (key, value) pairs, write a PySpark program to find the key with the maximum value.**
+30. **Write a PySpark program to create an RDD from a list of numbers and compute their square root.**
+31. **Given an RDD of strings, write a PySpark program to remove duplicate strings.**
+32. **Write a PySpark program to sort an RDD of numbers in descending order.**
+33. **Given an RDD of (key, value) pairs, write a PySpark program to create a new RDD with the values incremented by 1 for each key.**
+34. **Write a PySpark program to coalesce an RDD into a specified number of partitions.**
+35. **Given an RDD of (key, value) pairs, write a PySpark program to find the average value per partition.**
+36. **Write a PySpark program to compute the sum of squares of an RDD of numbers.**
+37. **Given an RDD of (key, value) pairs, write a PySpark program to filter keys based on a specified prefix.**
+38. **Write a PySpark program to aggregate elements of an RDD using a provided associative function and a neutral zero value.**
+39. **Given an RDD of (key, value) pairs, write a PySpark program to find the minimum value for each key.**
+40. **Write a PySpark program to zip two RDDs together.**
+41. **Given an RDD of sentences, write a PySpark program to create an RDD of words.**
+42. **Write a PySpark program to count the occurrences of each character in a text file.**
+43. **Given an RDD of (key, value) pairs, write a PySpark program to filter out keys that have values in a specified range.**
+44. **Write a PySpark program to convert an RDD of strings to an RDD of (string, length) pairs.**
+45. **Given an RDD of (key, value) pairs, write a PySpark program to group the keys and collect the values into a list.**
+46. **Write a PySpark program to find the median value of an RDD of numbers.**
+47. **Given an RDD of (key, value) pairs, write a PySpark program to perform a left outer join with another RDD.**
+48. **Write a PySpark program to compute the standard deviation of an RDD of numbers.**
+49. **Given an RDD of (key, value) pairs, write a PySpark program to count the number of keys that start with a specified letter.**
+50. **Write a PySpark program to combine two RDDs of (key, value) pairs into a single R
