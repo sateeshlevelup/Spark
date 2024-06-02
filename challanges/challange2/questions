@@ -1,0 +1,32 @@
+Problems:
+
+Calculate the average tip amount for each day of the week.
+Hint: Use the groupBy and avg functions.
+
+
+Find the maximum total bill amount for each time of day (Lunch or Dinner).
+Hint: Use the groupBy and max functions.
+
+
+Count the number of records for each combination of sex and smoker.
+Hint: Use the groupBy and count functions.
+
+
+Create a new column 'tip_percentage' that calculates the tip percentage based on the total bill amount.
+Hint: Use the withColumn function and calculate tip / total_bill * 100.
+
+
+Filter the DataFrame to include only records where the total bill amount is greater than $20 and the tip is more than 15% of the total bill.
+Hint: Use the filter function and calculate the condition based on total_bill and tip_percentage.
+
+
+Sort the DataFrame in descending order based on the total bill amount.
+Hint: Use the orderBy function with the desc option.
+
+
+Calculate the average tip percentage for each day of the week and time of day combination.
+Hint: Use the groupBy function with multiple columns, and calculate avg(tip_percentage).
+
+
+Find the records with the minimum and maximum tip amounts.
+Hint: Use the agg function with min and max on the tip column.
