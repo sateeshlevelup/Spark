@@ -1,0 +1,21 @@
+
+
+# Sample data
+data = [
+    Row(transaction_id=1, customer_id=101, product_id=1, quantity=2, price=50.0, date="2024-05-01"),
+    Row(transaction_id=2, customer_id=102, product_id=2, quantity=1, price=100.0, date="2024-05-02"),
+    Row(transaction_id=3, customer_id=101, product_id=1, quantity=3, price=50.0, date="2024-05-02"),
+    Row(transaction_id=4, customer_id=103, product_id=3, quantity=2, price=150.0, date="2024-05-03"),
+    Row(transaction_id=5, customer_id=102, product_id=1, quantity=1, price=50.0, date="2024-05-04"),
+    Row(transaction_id=6, customer_id=104, product_id=2, quantity=2, price=100.0, date="2024-05-05"),
+    Row(transaction_id=7, customer_id=103, product_id=3, quantity=1, price=150.0, date="2024-05-06"),
+    Row(transaction_id=8, customer_id=101, product_id=2, quantity=1, price=100.0, date="2024-05-06"),
+    Row(transaction_id=9, customer_id=102, product_id=3, quantity=3, price=150.0, date="2024-05-07"),
+    Row(transaction_id=10, customer_id=104, product_id=1, quantity=2, price=50.0, date="2024-05-07")
+]
+
+# Create DataFrame
+df = spark.createDataFrame(data)
+
+# Show the DataFrame
+df.show()
