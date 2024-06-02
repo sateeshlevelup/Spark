@@ -1,0 +1,14 @@
++---------------+-----+------+-----+-------------------+
+|        source|total_bill|tip |sex |smoker|day|time|size|
++---------------+-----+------+-----+-------------------+
+|          vendor|   16.99|1.01|Female|    No|Sun|Dinner|  2|
+|          vendor|   10.34|1.66|  Male|    No|Sun|Dinner|  3|
+|          vendor|   21.01|3.5 |  Male|    No|Sun|Dinner|  3|
+|          vendor|   23.68|3.31|  Male|    No|Sun|Dinner|  2|
+|          vendor|   24.59|3.61|Female|    No|Sun|Dinner|  4|
+|          vendor|   25.29|4.71|  Male|    No|Sun|Dinner|  4|
+|          vendor|   8.34|1.21|  Male|    No|Thur|Lunch |  2|
+|          vendor|   27.18|2.00|Female|    Yes|Sat|Dinner|  2|
+|          vendor|   22.67|2.00|  Male|    Yes|Sat|Dinner|  2|
+|          vendor|   17.92|1.75|  Male|    No|Sat|Dinner|  2|
++---------------+-----+------+-----+-------------------+
