@@ -1,0 +1,70 @@
+
+Create a CSV file with the following data
+
+TransactionID,Date,Product,Category,Amount,Quantity,CustomerID,StoreID
+1,2023-01-01,Laptop,Electronics,1200,1,101,1
+2,2023-01-03,Phone,Electronics,800,2,102,2
+3,2023-01-04,Tablet,Electronics,600,1,103,1
+4,2023-01-05,Laptop,Electronics,1200,1,104,3
+5,2023-01-06,Headphones,Accessories,150,2,105,2
+6,2023-01-07,Charger,Accessories,50,3,106,1
+7,2023-01-08,Mouse,Accessories,25,4,107,3
+8,2023-01-09,Keyboard,Accessories,75,1,108,2
+9,2023-01-10,Monitor,Electronics,300,2,109,1
+10,2023-01-11,Laptop,Electronics,1200,1,110,3
+11,2023-01-12,Phone,Electronics,800,1,111,2
+12,2023-01-13,Tablet,Electronics,600,2,112,1
+13,2023-01-14,Headphones,Accessories,150,1,113,3
+14,2023-01-15,Charger,Accessories,50,2,114,2
+15,2023-01-16,Mouse,Accessories,25,1,115,1
+
+
+Load the CSV file into a PySpark DataFrame.
+
+df = spark.read.csv("path_to_csv", header=True, inferSchema=True)
+
+  -> Show the first 5 rows of the DataFrame
+  -> Display the schema of the DataFrame.
+  -> Select and show only the TransactionID, Date, and Amount columns.
+  -> Filter the DataFrame to show only transactions where the amount is greater than 500.
+  -> Sort the DataFrame by Date in ascending order.
+  -> Sort the DataFrame by Amount in descending order.
+  -> Add a new column TotalValue which is the product of Amount and Quantity
+  -> Rename the CustomerID column to ClientID.
+  -> Group the DataFrame by Category and calculate the total Amount for each category.
+  -> Group the DataFrame by StoreID and count the number of transactions for each store.
+  -> Filter transactions to show only those that occurred in StoreID 1.
+  -> Calculate the average Amount for each Product
+  -> Find the maximum Amount for transactions in the Electronics category.
+  -> Filter the DataFrame to show only transactions that occurred on or after 2023-01-05.
+  -> Create a new DataFrame with an additional column DiscountedAmount which is Amount with a 10% discount applied.
+  -> Filter and show transactions where the Quantity is greater than 1 and the Category is Accessories.
+  -> Count the number of unique ClientID values in the DataFrame.
+  -> Filter transactions where the Product starts with the letter 'L'.
+  -> Calculate the sum of TotalValue for each StoreID.
+  -> Create a new DataFrame that contains only the Date, Product, and Category columns.
+  -> Filter the DataFrame to show transactions where the Amount is between 100 and 1000.
+  -> Add a column Year extracted from the Date column.
+  -> Filter the DataFrame to show only transactions that happened in the year 2023.
+  -> Find the total Quantity of products sold for each Product.
+  -> Filter and show transactions where the Amount is less than 100 or the Quantity is greater than 2.
+  -> Select and show the Product and Amount columns, and rename Amount to Price.
+  -> Filter the DataFrame to show transactions where ClientID is either 101 or 102.
+  -> Calculate the average TotalValue for each StoreID.
+  -> Filter transactions to show only those that occurred in the first 10 days of January 2023.
+  -> Find the minimum Amount for each Category.
+  -> Add a column DoubleAmount which is twice the value of Amount.
+ -> Filter the DataFrame to show transactions where Product contains the substring 'top'.
+ -> Find the total Amount spent by each ClientID.
+ -> Filter the DataFrame to show only transactions where the Date is before 2023-01-10.
+-> Sort the DataFrame by ClientID in ascending order and then by Amount in descending order.
+-> Add a column IsExpensive which is True if Amount is greater than 1000, otherwise False.
+-> Filter and show transactions where the Product is either 'Laptop' or 'Tablet'.
+-> Calculate the number of transactions for each Date.
+-> Add a column Weekday extracted from the Date column, representing the day of the week.
+
+
+
+
+
+  
